@@ -21,7 +21,7 @@ public class FormTest extends BaseClass {
 		form.enterProdName(product);
 		form.enterMobNum(mobNumber);
 		form.enterEmailId(emailId);
-		form.selectProdCtg(product);
+		form.selectProdCtg(category);
 		form.enterProdQty(quantity);
 		form.enterPurName(name);
 		form.selectGst(gst);
