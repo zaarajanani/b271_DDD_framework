@@ -10,16 +10,17 @@ public class LoginTest extends BaseClass {
     LoginPage login;
 	@BeforeMethod
 	public void launchUrl() {
+		login=new LoginPage();
 		driver.get(Function.getProp("loginUrl"));
 		}
-	@Test
+	@Test(dataProvider = "ValidLogin")
 	public void LoginWithValidCredentials(String uName,String pwd,String expectedResult) {
 		login.enterUsername(uName);
 		login.enterPassword(pwd);
 		login.clickLoginBtn();
 		login.verifyHomePage(expectedResult);
    }
-	@Test
+	@Test(dataProvider = "InValidLogin")
 	public void LoginWithInValidCredentials(String uName,String pwd,String expectedResult) {
 		login.enterUsername(uName);
 		login.enterPassword(pwd);
@@ -28,11 +29,11 @@ public class LoginTest extends BaseClass {
 	}
   @DataProvider(name="ValidLogin")
   public String[][] validLogin() {
-	  return Function.getTestData("login", "ValidCredentails");
+	  return Function.getTestData("login", "ValiCredentials");
   }
   @DataProvider(name="InValidLogin")
   public String[][] InvalidLogin() {
-	  return Function.getTestData("login", "InValidCredentails");
+	  return Function.getTestData("login", "InvalidCredentials");
   }
 
 }
