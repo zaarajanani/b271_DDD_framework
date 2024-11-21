@@ -4,12 +4,10 @@
 	<listeners>
 		<listener class-name="com.vcentry.base.ListenerClass"></listener>
 	</listeners>
-	
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="com.vcentry.testcase.LoginTest"></class>
 	        <class name="com.vcentry.testcase.FormTest"></class>
-
 		</classes>
 	</test> <!--
 	Test -->

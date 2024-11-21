@@ -18,7 +18,7 @@ public class FormPage extends BaseClass {
   private	By cod=By.id("cod");
   private	By netBk=By.id("netbank");
   private	By orderBtn=By.id("order");
-  private	By sucessMsg=By.xpath("//div[@class='alert alert-sucess']");
+  private	By sucessMsg=By.xpath("//div[@class='alert alert-success']");
   
   public void enterProdName(String productName) {
 	  enterText(prodName, productName);
