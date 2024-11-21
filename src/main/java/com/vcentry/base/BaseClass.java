@@ -47,7 +47,8 @@ public class BaseClass {
 	}
 	
 	@BeforeTest
-	public static void initilize(String browser) {
+	public static void initilize() {
+		String browser=Function.getProp("browser");
 		try {
 			
 		if(browser.equalsIgnoreCase("chrome")) {
